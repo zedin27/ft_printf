@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_strrev.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: lhernand <lhernand@student.42.us.or>       +#+  +:+       +#+        */
+/*   By: lhernand <lhernand@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/01/27 19:42:29 by lhernand          #+#    #+#             */
-/*   Updated: 2018/01/27 19:44:26 by lhernand         ###   ########.fr       */
+/*   Updated: 2018/01/31 23:15:31 by ztisnes          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,18 +14,10 @@
 
 char			*ft_strrev(char *str)
 {
-	int 	l;
-	int 	i;
-	char 	temp;
-
-	l = ft_strlen(str) - 1;
-	i = 0;
-	while (i < (l - i))
+	if (*str)
 	{
-		temp = str[i];
-		str[i] = str[l - i];
-		str[l - i] = temp;
-		i++;
+		ft_strrev(str + 1);
+		ft_putchar(*str);
 	}
 	return (str);
 }

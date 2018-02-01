@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   print_x.c                                          :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: lhernand <lhernand@student.42.us.or>       +#+  +:+       +#+        */
+/*   By: lhernand <lhernand@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/01/29 00:42:19 by lhernand          #+#    #+#             */
-/*   Updated: 2018/01/29 00:42:32 by lhernand         ###   ########.fr       */
+/*   Updated: 2018/01/31 20:28:34 by ztisnes          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -63,7 +63,7 @@ void			print_x(t_bag *bag, va_list args, int *i)
 
 	test = (unsigned long)va_arg(args, long);
 //	str = ft_itoa(va_arg(args, long));
-	printf("%d\n", test);
+	printf("%ld\n", test);
 	str = ft_itoa(test);
 
 	str = ft_itoa(va_arg(args, long));

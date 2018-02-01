@@ -9,7 +9,9 @@
 # include "libft/libft.h"
 # include <locale.h>
 # include <wchar.h>
-# include <stdio.h>
+# include <stdio.h> //TODO: REMOVE THIS SHIT BEFORE SUBMISSION
+# include <inttypes.h>
+# include <stdint.h>
 
 typedef struct	s_bag
 {
@@ -55,6 +57,7 @@ void			print_percent(t_bag *bag, va_list args, int *i);
 int				power_i(int number, int exponent);
 long			power_l(long number, int exponent);
 char			*ft_ltoa(long n);
+char			*ft_ulltoa(uintmax_t n);
 char			*ft_intmax_toa(intmax_t num);
 
 #endif

@@ -1,5 +1,50 @@
 #include "ft_printf.h"
-# define INIT int i; int tmp; int len; long long oct; int a; char *number;
+# define INIT int i; int tmp; int len; intmax_t oct; int a; char *number;
+
+/*
+Study reference for bitshiftting
+int		oct(unsigned long long x) {
+	char buf[99999];
+	char *z = buf[99999];
+
+	while (x > INTMAX_MAX)
+		{
+			*--z = '0' + (x & 7);
+			x >>= 3;
+		}
+}
+
+char	*hex() {
+	static char memes[] = {'0123456789abcdef'}
+	char bu[99999];
+	char *z = buf[99999];
+	while(x) {
+		*--z = memes[x & 15];
+		x >>= 4;
+	}
+	return z;
+}
+
+union u_arg
+{
+	unint64_t i;
+	long double f;
+	uintptr_t p;
+}
+
+union u_arg *num;
+
+num.i;
+
+
+0    0      0    0      0    0      4    f
+0000 0000 | 0000 0000 | 0000 0000 | 0100 1111 66
+									0000 1111
+											f
+											4
+
+*/
+
 static char	 *print_octal(char *str, int *l)
 {
 	/*
@@ -45,13 +90,13 @@ void		print_o(t_bag *bag, va_list args, int *i)
 	int len;
 	char *str;
 	char *res;
-	long input;
+	intmax_t input;
 
-	input = va_arg(args, long);
-	if (input < 0)
-		input = (unsigned long)input;
-	str = ft_itoa2(input);
-	printf("TRYING TO PRINT 4294967286: %s\n", str);
+	input = va_arg(args, intmax_t);
+	// if (input < 0)
+	// 	input = (uintmax_t)input;
+	str = ft_intmax_toa(input);
+	printf("%s\n", str);
 	len = ft_strlen(str);
 	res = print_octal(str, &len);
 	*i += len;

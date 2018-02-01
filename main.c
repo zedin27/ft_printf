@@ -2,6 +2,42 @@
 
 int main()
 {
+	int n;
+	int s;
+
+	//	n = ft_printf("%d\n", 0);
+	//	printf("result: %d\n", n);
+
+	//	n = ft_printf("%#d\n", 1);
+	//	printf("Number sign: %#d\n", 1);
+	/*
+	printf("0 flag with no min width\n");
+	printf("EXPECTED: '%0d'\n", 45);
+	ft_printf("RESULT: '%0d'\n", 45);
+	printf("0 flag with min width > num width\n");
+	n = printf("EXPECTED: '%04d'\n", 22);
+	s= ft_printf("ACTUAL: '%04d'\n", 22);
+	printf("EXPECTED return: %d\n", n);
+	printf("ACTUAL return: %d\n", s);
+	n = ft_printf("Width: %3.3d\n", 2);
+	printf("Width: %5.4d\n", 235);
+	printf("Width: %04d\n", 245);
+	printf("Width: %4d\n", 267);
+	*/
+	//	n = ft_printf("%x\n", 0);
+	//	printf("result: %x\n", n);
+
+	//	n = ft_printf("%#d\n", 1);
+	//	printf("Number sign: %#d\n", 1);
+
+	printf("beginning test for ft_printf with octal conversion\n\n");
+
+	intmax_t len2 = 0;
+	n = printf("TESTING 145640 -> %o\n", 145640);
+	ft_putchar('\n');
+	len2 = ft_printf("TEST -> %o", 145640);
+	//printf("n -> %d\t n2 -> %d\n", n, len2);
+
 	// Emoji test.
 	//setlocale(LC_ALL,"");
     //printf("Let's go to the cantina and eat some %lc\n", 0x1F35D);
@@ -23,7 +59,7 @@ int main()
 	printf("***********************HANDLE_PERCENT PARSING TESTS***************************\n");
 	printf("For these parsing tests to work, make sure to remember to set return type from \"void\" to \"t_bag *\" on function \"handle_percent\". Set it back to void when you are done.\n");
 
-	
+
 	format = "%+d";
 	printf("%s\n", format);
 	bag = handle_percent(&format, dummy, &number_of_printed_characters);

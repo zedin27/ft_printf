@@ -6,7 +6,7 @@
 /*   By: ztisnes <ztisnes@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/10/08 21:58:14 by ztisnes           #+#    #+#             */
-/*   Updated: 2018/01/29 00:06:13 by ztisnes          ###   ########.fr       */
+/*   Updated: 2018/01/31 21:09:48 by ztisnes          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,7 +16,7 @@
 ** Look at ft_itoa_base
 */
 
-char	*ft_itoa2(int n)
+char	*ft_itoa2(uintmax_t n)
 {
 	return (ft_itoa_base(n, 10));
 }
